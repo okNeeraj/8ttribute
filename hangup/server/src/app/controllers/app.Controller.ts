@@ -6,10 +6,10 @@ const getUser = async (req: any, res: any) => {
 
 const addUser = async (req: any, res: any) => {
   const newUser = new AppModel({
-    name: 'Neeraj Singh',
-    email: 'okneerajsingh@gmail.com',
-    phone: 7400000740,
-    password: '324234csd430sjldk4'
+    name: 'Bhaskar',
+    email: 'bhaskar@gmail.com',
+    phone: 9874009484,
+    password: 'fse3dfs423430sjl4f3e'
   })
   newUser.save().then(() => console.log('New use added successfully.'))
 
