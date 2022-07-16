@@ -1,7 +1,7 @@
 import Express from 'express'
 import Config from './config/app.Config'
 import Path from 'path'
-import Routes from './routes/v1/app.Route'
+import Routes from './routes/v1/app.Route';
 
 const App = Express()
 const appConfig = Config()
