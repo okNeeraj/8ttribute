@@ -15,6 +15,7 @@ lerna-debug.log*
 
 # production
 /build
+speechService.json
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

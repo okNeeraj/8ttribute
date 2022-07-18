@@ -8,6 +8,7 @@ const appConfig: Function = () => {
     appName: process.env.APP_NAME,
     apiVersion: process.env.API_VERSION,
     port: process.env.PORT,
+    speech_key: process.env.GOOGLE_APPLICATION_CREDENTIALS,
     db: {
       mongoose: {
         url: process.env.MONGODB_URL,
