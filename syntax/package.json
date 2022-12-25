@@ -1,0 +1,56 @@
+{
+    "name": "8ttribute",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "dev": "nodemon src/server.ts"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.1",
+        "ejs": "^3.1.8",
+        "express": "^4.18.1",
+        "express-ejs-layouts": "^2.5.1",
+        "mongoose": "^6.4.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/okNeeraj/8ttribute.git"
+    },
+    "bugs": {
+        "url": "https://github.com/okNeeraj/8ttribute/issues"
+    },
+    "homepage": "https://github.com/okNeeraj/8ttribute#readme",
+    "keywords": [
+        "nodejs",
+        "expressjs",
+        "enterprise",
+        "8ttribute",
+        "mongodb",
+        "mongoose",
+        "software",
+        "saas",
+        "business",
+        "logic",
+        "node"
+    ],
+    "author": "Neeraj Singh",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/express": "^4.17.13",
+        "@types/node": "^18.0.3",
+        "@typescript-eslint/eslint-plugin": "^5.30.5",
+        "@typescript-eslint/parser": "^5.30.5",
+        "eslint": "^8.19.0",
+        "eslint-config-standard": "^17.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-n": "^15.2.4",
+        "eslint-plugin-promise": "^6.0.0",
+        "nodemon": "^2.0.19",
+        "ts-node": "^10.8.2",
+        "typescript": "^4.7.4"
+    }
+}

@@ -1,0 +1,32 @@
+section {
+  margin-bottom: 36px;
+}
+
+.row:empty {
+  min-height: 100px;
+  border: 1px dashed #ccc;
+}
+[class^="col-"] {
+  background: #c9db7b;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  text-align: center;
+}
+[class^="col-"] span {
+  display: block;
+  font-size: 16px;
+}
+
+.ghost-bg {
+  /* border: 2px dashed green; */
+  background: rgb(29 179 80 / 30%);
+}
+.ghost-bg * {
+  opacity: 0;
+}
+[draggable="true"] {
+  cursor: move;
+}
