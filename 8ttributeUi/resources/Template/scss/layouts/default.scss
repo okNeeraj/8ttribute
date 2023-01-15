@@ -1,0 +1,119 @@
+body {
+    color: var(--app-glass-bg);
+    --app-body-height: 100vh;
+    min-height: var(--app-body-height);
+    background-size: cover;
+}
+
+.app {
+    --app-sidebar-width: 60px;
+    --app-sidebar-expapnded-width: 300px;
+    --app-sidebar-shadow: 0 -9px 2px 8px rgba(0,0,0,0.2);
+    --app-container-bg: #000;
+    --app-container-bg-dark: #000;
+    display: flex;
+    min-height: var(--app-body-height);
+}
+.sidebar {
+    width: var(--app-sidebar-width);
+    height: var(--app-body-height);
+    box-shadow: var(--app-sidebar-shadow);
+    display: flex;
+    .app-bar {
+        width: var(--app-sidebar-width);
+        min-width: var(--app-sidebar-width);
+        @include glass(
+            $color: #fff,
+            $alpha: 92%,
+            $blur: 23px,
+        );
+    }
+    .app-menu {
+        display: none;
+        opacity: 0;
+    }
+    &.expanded {
+        width: var(--app-sidebar-expapnded-width);
+        .app-menu {
+            width: var(--app-sidebar-expapnded-width);
+            min-width: calc(var(--app-sidebar-expapnded-width) - var(--app-sidebar-width));
+            display: block;
+            padding: 12px 22px;
+            opacity: 1;
+            flex: 1;
+
+            @include glass(
+                $color: #fff,
+                $alpha: 85%,
+                $blur: 23rem,
+            );
+        }
+    }
+}
+
+.app-container {
+    flex: 1;
+    @include glass(
+        $color: #fff,
+        $alpha: 93%,
+        $blur: 23rem,
+    );
+    @at-root{
+        [data-bs-theme='dark'] & {
+            @include glass(
+                $color: #000,
+                $alpha: 93%,
+                $blur: 23rem,
+            );
+        }
+    }
+}
+
+header {
+    padding: 12px 36px;
+    align-items: center;
+}
+
+main {
+    padding: 12px 36px;
+}
+
+
+
+[data-bs-theme='light'] {
+    aside {
+
+    }
+    .app-container {
+        background-color: rgb(255 255 255 / 80%);
+        backdrop-filter: blur(23px);
+    }
+    .card {
+        box-shadow: 0px 8px 40px #d1caca;
+        background: rgb(255 255 255 / 77%);
+        border: 0;
+    }
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.card {
+    background: rgb(0 0 0 / 31%);
+    border: 1px solid rgb(128 93 66 / 29%);
+}
+
+h1 {
+    font-size: 8.5rem;
+    font-family: sans-serif;
+    color: rgba(0,0,0,0);
+    -webkit-text-stroke: 2px rgba(0,0,0,0.3);
+}

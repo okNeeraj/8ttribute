@@ -1,0 +1,7 @@
+@use "sass:color";
+
+@mixin glass($color: #fff, $alpha: 50%, $blur: 18px) {
+    $glassStyle: color.scale(rgb($color, 0), $alpha: $alpha);
+    background-color: $glassStyle;
+    backdrop-filter: blur($blur);
+}
