@@ -1,6 +1,11 @@
 import loadash from 'lodash'
 window._ = loadash
 
+import.meta.glob([
+    '../images/**',
+    '../fonts/**',
+]);
+
 import '../scss/app.scss'
 
 import * as Popper from '@popperjs/core'
