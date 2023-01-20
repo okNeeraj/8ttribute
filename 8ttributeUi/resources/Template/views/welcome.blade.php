@@ -43,7 +43,7 @@
                 <div class="app-list">
                     <a href="#!" class="">
                         <span class="material-icons-outlined">
-                            display_settings
+                            store
                         </span>
                     </a>
                 </div>
