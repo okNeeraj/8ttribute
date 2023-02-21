@@ -1,0 +1,25 @@
+$prefix: 'app-';
+
+$custom-colors:(
+    'primary': #0d8fac,
+    'customColor': #6232c2,
+);
+
+
+$primary:       #0d8fac !default;
+// $secondary:     #04534b !default;
+// $success:       #000 !default;
+// $info:          #000 !default;
+// $warning:       #000 !default;
+// $danger:        #000 !default;
+// $light:         #000 !default;
+// $dark:          #000 !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;

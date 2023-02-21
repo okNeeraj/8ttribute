@@ -1,0 +1,269 @@
+body {
+    --app-body-height: 100vh;
+    min-height: var(--app-body-height);
+    // background-image: url('../images/skins/skin.jpg');
+    background-size: cover;
+}
+
+.app {
+    --app-sidebar-width: 70px;
+    --app-sidebar-expapnded-width: 230px;
+    --app-sidebar-shadow: 0 -9px 2px 8px rgba(0,0,0,0.2);
+    --app-container-bg: #fff;
+    --app-container-bg-dark: #000;
+    display: flex;
+    min-height: var(--app-body-height);
+}
+.sidebar {
+    // width: calc(var(--app-sidebar-width) + var(--app-sidebar-expapnded-width));
+    height: var(--app-body-height);
+    display: flex;
+    position: fixed;
+    left: 0;
+    z-index: 9;
+    top: 0;
+    bottom: 0;
+    .app-bar {
+        width: var(--app-sidebar-width);
+        min-width: var(--app-sidebar-width);
+        @include glass(
+            $color: #fff,
+            $alpha: 92%,
+            $blur: 23px,
+        );
+
+        @at-root {
+            [data-bs-theme='dark'] & {
+                @include glass(
+                    $color: #101925,
+                    $alpha: 100%,
+                    $blur: 23rem,
+                );
+            }
+        }
+    }
+    .app-menu {
+        display: none;
+        opacity: 0;
+    }
+}
+.sidebar-expanded {
+    .app-container {
+        margin-left: calc(var(--app-sidebar-width) + var(--app-sidebar-expapnded-width));
+    }
+    .sidebar {
+        .app-menu {
+            width: var(--app-sidebar-expapnded-width);
+            min-width: var(--app-sidebar-expapnded-width);
+            display: block;
+            padding: 12px 22px;
+            opacity: 1;
+            flex: 1;
+
+            @include glass(
+                $color: #fff,
+                $alpha: 85%,
+                $blur: 23rem,
+            );
+
+            @at-root {
+                [data-bs-theme='dark'] & {
+                    @include glass(
+                        $color: #141e2b,
+                        $alpha: 100%,
+                        $blur: 23rem,
+                    );
+                }
+            }
+        }
+    }
+}
+
+.app-container {
+    flex: 1;
+    margin-left: var(--app-sidebar-width);
+    @include glass(
+        $color: #fff,
+        $alpha: 93%,
+        $blur: 23rem,
+    );
+    @at-root {
+        [data-bs-theme='dark'] & {
+            @include glass(
+                $color: #1b2430,
+                $alpha: 100%,
+                $blur: 23rem,
+            );
+        }
+    }
+}
+
+header {
+    padding: 12px 36px;
+    align-items: center;
+}
+
+main {
+    padding: 12px 36px;
+}
+
+
+
+[data-bs-theme='light'] {
+    aside {
+
+    }
+    .app-container {
+        background-color: rgb(255 255 255 / 80%);
+        backdrop-filter: blur(23px);
+    }
+    .card {
+        background: rgb(255 255 255 / 77%);
+        box-shadow: 0px 8px 20px rgb(0 0 0 / 5%);
+        border: 0;
+    }
+}
+
+.app-skin {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.card {
+    background: rgb(0 0 0 / 31%);
+    border: 1px solid rgb(128 93 66 / 29%);
+}
+
+h1 {
+    font-size: 6.5rem;
+    font-family: sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(0,0,0,0.3);
+    span {
+        display: block;
+        color: rgb(0 0 0 / 19%);
+        -webkit-text-stroke: 0;
+    }
+    @at-root{
+        [data-bs-theme='dark'] & {
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+            span {
+                color: rgba(255, 255, 255, 0.19);
+            }
+        }
+    }
+}
+
+.list-group {
+    border-radius: 0;
+    border: 0;
+}
+.list-group-item {
+    margin-bottom: 12px;
+    border: 0;
+    border-radius: 0.3rem !important;
+    background: transparent;
+    font-size: 12px;
+    padding: 12px 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+    &.active {
+        background-color: #fff;
+        color: $dark;
+        box-shadow: 0px 8px 15px rgb(0 0 0 / 3%);
+        @at-root {
+            [data-bs-theme='dark'] & {
+                background-color: #2a415f33;
+                box-shadow: 0px 1px 8px rgb(16 25 37 / 67%);
+                color: $primary;
+            }
+        }
+    }
+    &:hover {
+        background-color: #fff;
+        @at-root {
+            [data-bs-theme='dark'] & {
+                background-color: #2a415f33;
+                box-shadow: 0px 1px 8px rgb(16 25 37 / 67%);
+                color: $primary;
+            }
+        }
+    }
+}
+.btn {
+    border-radius: 4px;
+}
+.material-icons-outlined {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+.app-list {
+    padding: 4px;
+    margin-bottom: 12px;
+    a {
+        color: #000;
+        display: inline-block;
+        padding: 4px;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        &:hover, &.active {
+            background-color: #fff;
+            color: $primary;
+            box-shadow: 0px 1px 8px rgb(0 0 0 / 12%);
+            @at-root {
+                [data-bs-theme='dark'] & {
+                    background-color: #141e2b;
+                    box-shadow: 0px 1px 8px rgb(0 0 0);
+                    color: $primary;
+                }
+            }
+        }
+        @at-root {
+            [data-bs-theme='dark'] & {
+                color: #adb5bd;
+            }
+        }
+    }
+    .material-icons-outlined {
+        font-size: 26px;
+        margin-top: 4px;
+    }
+}
+.app-head {
+    font-family: cursive;
+    font-weight: bold;
+    padding-bottom: 8px;
+    padding-top: 12px;
+}
+// .placeholder {
+//     background-color: rgba(139, 139, 139, 0.2)!important;
+//     border: 0;
+// }
