@@ -20,7 +20,6 @@ function Builder() {
 	return(
 		<div className={style.container}>
 			<LayoutSettings />
-			<LayoutSettings />
 		</div>
 	)
 }
